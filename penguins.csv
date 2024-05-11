@@ -1,7 +1,7 @@
-Activity Name,Key skill area,Subject,Estimated activity duration in minutes,# of Six Bricks needed per child,Recommended number of children
+Activity Name,Key skill area,Subject area,Estimated activity duration in minutes,# of Six Bricks needed per child,Recommended number of children
 Example 1,Literacy,Math,20,6,2+
-Example 2,Numeracy,Math,20,6,4+
-Example 3,Social-Emotional,Language and Literacy,20,6,2+
+Example 2,Numeracy,Math,20,12,4+
+Example 3,Social-Emotional,Language and Literacy,20,0,2+
 Example 4,Perceptual,Coding,20,6,8+
 Example 5,Physical,Any,20,6,8+
-Example 6,Groups and Games,Any,10,2+
+Example 6,Groups and Games,Any,10,6,2+
