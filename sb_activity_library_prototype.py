@@ -92,7 +92,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                         df = df[df[column].astype(str).str.contains(user_text_input)]
     return df
 
-data_url = "https://raw.githubusercontent.com/mcnakhaee/palmerpenguins/master/palmerpenguins/data/penguins.csv"
+data_url = "https://github.com/raveenadoshi/streamlit-example/blob/e778d7c89efcdfa285572f318c8aed053832cb43/penguins.csv"
 
 df = pd.read_csv(data_url)
 st.dataframe(filter_dataframe(df))
