@@ -10,11 +10,11 @@ from pandas.api.types import (
 
 st.title("Welcome to the Six Bricks Activity Library!")
 
-st.write(
-    """Use the filters on the left-hand side of this screen to find activities that suit the developmental areas and subjects you're interested in browsing activities for. 
-        To learn more, visit [Care for Education](https://www.carefored.co.za) -- home of Six Bricks.
-    """
-)
+st.write("""Use the filters on the left-hand side of this screen to find activities that suit the developmental areas and subjects you're interested in browsing activities for.
+        """)
+
+st.write("""To learn more, visit [Care for Education](https://www.carefored.co.za) -- home of Six Bricks.
+        """)
 
 def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     """
