@@ -32,7 +32,6 @@ st.write(
 )
 
 def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
-def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     """
     Adds a UI on top of a dataframe to let viewers filter columns
 
