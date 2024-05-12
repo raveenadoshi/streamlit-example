@@ -6,14 +6,9 @@ from pandas.api.types import (
     is_numeric_dtype,
 )
 
-# Display banner image
-st.image("Six Bricks Banner.png")
 
-# Display header and information
-st.header("Six Bricks Activity Library")
-
-st.info("Welcome to the Six Bricks Library Activity! Use the filters on the left-hand side of this page to find Six Bricks activities that align with the developmental areas or subjects you're interested in.")
-
+st.set_page_config(page_title="Six Bricks Activity Library", page_icon="Six Bricks Square.png", layout="centered", initial_sidebar_state="expanded", menu_items=None)
+# DATAFRAME START
 # Define columns to exclude from being filtered on
 excluded_columns = ["Link to activity", "Activity name"]
 
@@ -30,6 +25,15 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     """
     
     with st.sidebar:
+
+        # HEADER START
+
+        # Display header and information
+        st.image('Six Bricks Banner.png')
+        st.header("Six Bricks Activity Library")
+
+        st.write("Welcome to the Six Bricks Activity Library! Use the filters on below to find Six Bricks activities that align with the developmental areas or subjects you're interested in.")
+        # HEADER END
     
         df = df.copy()
         
@@ -77,6 +81,8 @@ st.dataframe(
     hide_index=True,
 )
 
+# DATAFRAME END
+
 "---"
 
 st.subheader("About Six Bricks")
@@ -85,4 +91,4 @@ st.write("Six Bricks is a play-based learning methodology developed by [Care for
 "---"
 
 st.caption("This open-source web application has been developed by [Leap Education](mailto:learn.play.leap@gmail.com) & [Six Bricks Australia](https://www.sixbricksaustralia.au/). Check out our Github repository [here](https://github.com/raveenadoshi/streamlit-example/tree/master).")
-st.caption("LEGO® and DUPLO® are registered trademarks of the LEGO® Group. © 2024 The LEGO® Group")
+st.caption("LEGO® and DUPLO® are registered trademarks of the LEGO® Group. © 2024 The LEGO® Group.")
