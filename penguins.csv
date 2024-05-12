@@ -1,13 +1,13 @@
-Activity name,Link to activity,Key skill areas,Subject areas,Est. duration (mins),Recommended # of children
-Example 1,www.google.com,Literacy,Math,20,2+
-Example 2,www.google.com,Numeracy,Math,20,4+
-Example 3,www.google.com,Social-Emotional,Language and Literacy,20,2+
-Example 4,www.google.com,Perceptual,Coding,20,8+
-Example 5,www.google.com,Physical,Any,20,6+
-Example 6,www.google.com,Groups and Games,Any,10,2+
-Example 7,www.google.com,Groups and Games,Any,10,2+
-Example 8,www.google.com,Groups and Games,Any,10,2+
-Example 9,www.google.com,Groups and Games,Any,10,2+
-Example 10,www.google.com,Groups and Games,Any,10,2+
-Example 11,www.google.com,Groups and Games,Any,10,2+
-Example 12,www.google.com,Groups and Games,Any,10,2+
+Activity name,Link to activity,Key skill areas,Subject areas,Est. duration (mins),Min. recommended # of children
+Memory Game,https://raw.githubusercontent.com/raveenadoshi/streamlit-example/e9d14bea9b7300f6ac7b26c0bc05013bb0f88c0a/activities/memory-game.png,Perceptual,Any,15,1
+Example 2,www.google.com,Numeracy,Math,20,4
+Example 3,www.google.com,Social-Emotional,Language and Literacy,20,2
+Example 4,www.google.com,Literacy,Coding,20,8
+Example 5,www.google.com,Physical,Any,20,6
+Example 6,www.google.com,Groups and Games,Any,10,5
+Example 7,www.google.com,Groups and Games,Any,10,3
+Example 8,www.google.com,Groups and Games,Any,10,1
+Example 9,www.google.com,Groups and Games,Any,10,2
+Example 10,www.google.com,Groups and Games,Any,10,2
+Example 11,www.google.com,Groups and Games,Any,10,2
+Example 12,www.google.com,Groups and Games,Any,10,2

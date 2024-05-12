@@ -70,7 +70,7 @@ df_filtered = filter_dataframe(df)
 st.dataframe(
     df_filtered,
     column_config={
-        "Link to activity": st.column_config.LinkColumn("Link to activity")
+        "Link to activity": st.column_config.LinkColumn("Link to activity",display_text="Click here")
     },
     hide_index=True,
 )
