@@ -16,6 +16,10 @@ st.write("""Welcome to the Six Bricks Library Activity! Use the filters on the l
 st.write("""To learn more about Six Bricks, visit [Care for Education](https://www.carefored.co.za) -- home of the Six Bricks methodology.
         """)
 
+
+# Columns to exclude from being filtered on
+excluded_columns = ["Link to activity", "Activity name"]
+
 def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     """
     Adds a UI on top of a dataframe to let viewers filter columns
@@ -32,7 +36,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
         df = df.copy()
         
         with st.container():
-            to_filter_columns = st.multiselect("Select your filters:", df.columns,("Subject areas","Key skill areas"))
+            to_filter_columns = st.multiselect("Select your filters:", [col for col in df.columns if col not in excluded_columns], default=("Subject areas", "Key skill areas"))
             for column in to_filter_columns:
                 left, right = st.columns((1, 20))
                 # Treat columns with < 10 unique values as categorical
@@ -64,7 +68,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                         df = df[df[column].astype(str).str.contains(user_text_input)]
     return df
 
-df = pd.read_csv("penguins.csv")
+df = pd.read_csv("activity_table.csv")
 df_filtered = filter_dataframe(df)
 
 st.dataframe(
