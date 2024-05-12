@@ -6,20 +6,18 @@ from pandas.api.types import (
     is_numeric_dtype,
 )
 
+# Display banner image
 st.image("Six Bricks Banner.png")
 
-st.title("Six Bricks Activity Library")
+# Display header and information
+st.header("Six Bricks Activity Library")
 
-st.write("""Welcome to the Six Bricks Library Activity! Use the filters on the left-hand side of this page to find Six Bricks activities that align with the developmental areas or subjects you're interested in.
-        """)
+st.info("Welcome to the Six Bricks Library Activity! Use the filters on the left-hand side of this page to find Six Bricks activities that align with the developmental areas or subjects you're interested in.")
 
-st.write("""To learn more about Six Bricks, visit [Care for Education](https://www.carefored.co.za) -- home of the Six Bricks methodology.
-        """)
-
-
-# Columns to exclude from being filtered on
+# Define columns to exclude from being filtered on
 excluded_columns = ["Link to activity", "Activity name"]
 
+# Function to add a nested filtering UI on top of the dataframe
 def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     """
     Adds a UI on top of a dataframe to let viewers filter columns
@@ -78,3 +76,13 @@ st.dataframe(
     },
     hide_index=True,
 )
+
+"---"
+
+st.subheader("About Six Bricks")
+st.write("Six Bricks is a play-based learning methodology developed by [Care for Education](https://www.carefored.co.za) and powered by the [LEGO Foundation](https://learningthroughplay.com/). The Six Bricks concept involves implementation of manipulatives (6 colorful LEGO DUPLO bricks) to develop key executive functions and build numerous development areas for children. To learn more about Six Bricks, visit https://www.carefored.co.za.")
+
+"---"
+
+st.caption("This open-source web application has been developed by [Leap Education](mailto:learn.play.leap@gmail.com) & [Six Bricks Australia](https://www.sixbricksaustralia.au/). Check out our Github repository [here](https://github.com/raveenadoshi/streamlit-example/tree/master).")
+st.caption("LEGO® and DUPLO® are registered trademarks of the LEGO® Group. © 2024 The LEGO® Group")
