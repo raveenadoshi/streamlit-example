@@ -33,7 +33,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
         st.image('Six Bricks Banner.png')
         st.header("Six Bricks Activity Library")
 
-        st.write("Welcome to the Six Bricks Activity Library! Use the filters on below to find Six Bricks activities that align with the developmental areas or subjects you're interested in.")
+        st.write("Welcome to the Six Bricks Activity Library! Use the filters on below to find Six Bricks activities that align with the developmental areas or subjects you're interested in. You can also add additional filters to refine your search.")
         # HEADER END
     
         df = df.copy()
@@ -77,6 +77,7 @@ df_filtered = filter_dataframe(df)
 
 # Display dataframe
 st.subheader("Six Bricks Activity Library")
+st.info("Use the panel on the left-hand side to filter this list of Six Bricks activities.",icon="💡")
 st.dataframe(
     df_filtered,
     column_config={
