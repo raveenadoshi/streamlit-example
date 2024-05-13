@@ -76,7 +76,7 @@ df = pd.read_csv("activity_table.csv")
 df_filtered = filter_dataframe(df)
 
 # Display dataframe
-st.subheader("Six Bricks activity library")
+st.subheader("Six Bricks Activity Library")
 st.dataframe(
     df_filtered,
     column_config={
