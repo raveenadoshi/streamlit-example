@@ -1,11 +1,11 @@
-Activity name,Link to activity,Key skill areas,Subject areas,Est. duration (mins),Min. # of children
-Memory Game,https://raw.githubusercontent.com/raveenadoshi/streamlit-example/e9d14bea9b7300f6ac7b26c0bc05013bb0f88c0a/activities/memory-game.png ,Perceptual,Language,10,1
-Listen and Do,https://raw.githubusercontent.com/raveenadoshi/streamlit-example/master/activities/listen-and-do.png,Perceptual,Math,10,2
-Prepositions,https://raw.githubusercontent.com/raveenadoshi/streamlit-example/master/activities/prepositions.png,Literacy,Language,15,4
-Sequence the Story,https://raw.githubusercontent.com/raveenadoshi/streamlit-example/master/activities/sequence-the-story.png,Literacy,Language,15,1
-Hanging Around,https://raw.githubusercontent.com/raveenadoshi/streamlit-example/master/activities/hanging-around.png,Numeracy,Math,10,2
-Bar Graph,https://raw.githubusercontent.com/raveenadoshi/streamlit-example/master/activities/bar-graph.png,Numeracy,Math,15,4
-Colourful Creatures,https://raw.githubusercontent.com/raveenadoshi/streamlit-example/master/activities/colourful-creatures.png,Social-Emotional,Art,15,6
-Colourful Creatures,https://raw.githubusercontent.com/raveenadoshi/streamlit-example/master/activities/colourful-creatures.png,Social-Emotional,Language,15,6
-Twister,https://raw.githubusercontent.com/raveenadoshi/streamlit-example/master/activities/twister.png,Physical,Language,10,2
-Dice and Stack,https://raw.githubusercontent.com/raveenadoshi/streamlit-example/master/activities/dice-and-stack.png,Groups and Games,Math,15,4
+Activity name,Link to activity,Key skill areas,Subject areas,Est. duration (mins),Min. # of children,Language of instruction
+Memory Game,https://raw.githubusercontent.com/raveenadoshi/streamlit-example/e9d14bea9b7300f6ac7b26c0bc05013bb0f88c0a/activities/memory-game.png ,Perceptual,Language,10,1,English
+Listen and Do,https://raw.githubusercontent.com/raveenadoshi/streamlit-example/master/activities/listen-and-do.png,Perceptual,Math,10,2,English
+Prepositions,https://raw.githubusercontent.com/raveenadoshi/streamlit-example/master/activities/prepositions.png,Literacy,Language,15,4,English
+Sequence the Story,https://raw.githubusercontent.com/raveenadoshi/streamlit-example/master/activities/sequence-the-story.png,Literacy,Language,15,1,English
+Hanging Around,https://raw.githubusercontent.com/raveenadoshi/streamlit-example/master/activities/hanging-around.png,Numeracy,Math,10,2,English
+Bar Graph,https://raw.githubusercontent.com/raveenadoshi/streamlit-example/master/activities/bar-graph.png,Numeracy,Math,15,4,English
+Colourful Creatures,https://raw.githubusercontent.com/raveenadoshi/streamlit-example/master/activities/colourful-creatures.png,Social-Emotional,Art,15,6,English
+Colourful Creatures,https://raw.githubusercontent.com/raveenadoshi/streamlit-example/master/activities/colourful-creatures.png,Social-Emotional,Language,15,6,English
+Twister,https://raw.githubusercontent.com/raveenadoshi/streamlit-example/master/activities/twister.png,Physical,Language,10,2,English
+Dice and Stack,https://raw.githubusercontent.com/raveenadoshi/streamlit-example/master/activities/dice-and-stack.png,Groups and Games,Math,15,4,English
