@@ -8,6 +8,7 @@ from pandas.api.types import (
 
 
 st.set_page_config(page_title="Six Bricks Activity Library", page_icon="Six Bricks Square.png", layout="centered", initial_sidebar_state="expanded", menu_items=None)
+
 # DATAFRAME START
 # Define columns to exclude from being filtered on
 excluded_columns = ["Link to activity", "Activity name"]
@@ -70,9 +71,12 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                         df = df[df[column].astype(str).str.contains(user_text_input)]
     return df
 
+# Read and filter activity list
 df = pd.read_csv("activity_table.csv")
 df_filtered = filter_dataframe(df)
 
+# Display dataframe
+st.subheader("Six Bricks activity library")
 st.dataframe(
     df_filtered,
     column_config={
@@ -82,6 +86,12 @@ st.dataframe(
 )
 
 # DATAFRAME END
+
+"---"
+
+st.subheader("Submit an activity")
+st.write("If you would like to contribute to the library with an activity you have created, you can submit your Six Bricks activity using the [linked form](https://forms.gle/fqpreubi3ZmnoWw86). We'll then review your submission and add it to the library.")
+
 
 "---"
 
