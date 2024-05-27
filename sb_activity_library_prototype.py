@@ -9,35 +9,51 @@ from pandas.api.types import (
 
 st.set_page_config(page_title="Six Bricks Activity Library", page_icon="Six Bricks Square.png", layout="centered", initial_sidebar_state="expanded", menu_items=None)
 
-# DATAFRAME START
-# Define columns to exclude from being filtered on
-excluded_columns = ["Link to activity", "Activity name"]
+st.subheader("Six Bricks Activity Library")
 
-# Function to add a nested filtering UI on top of the dataframe
-def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Adds a UI on top of a dataframe to let viewers filter columns
-
-    Args:
-        df (pd.DataFrame): Original dataframe
-
-    Returns:
-        pd.DataFrame: Filtered dataframe
-    """
-    
-    with st.sidebar:
+with st.sidebar:
 
         # HEADER START
 
         # Display header and information
-        st.image('Six Bricks Banner.png')
+        st.image('Six Bricks Stack.png',width=200)
         st.header("Six Bricks Activity Library")
+        st.write("Welcome to the Six Bricks Activity Library! [Info]")
+        st.subheader("Quick actions")
+        st.button("🔍 Find an activity")
+        st.button("💡 Sumbit an activity to the library")
 
-        st.write("Welcome to the Six Bricks Activity Library! Use the filters on below to find Six Bricks activities that align with the developmental areas or subjects you're interested in. You can also add additional filters to refine your search.")
-        # HEADER END
-    
-        df = df.copy()
+        "---"
+
+        st.subheader("About Six Bricks")
+        st.write("Six Bricks is a hand-on, play-based learning methodology developed by [Care for Education](https://www.carefored.co.za) and powered by the [LEGO Foundation](https://learningthroughplay.com/). The Six Bricks concept uses a set of 6 colorful 2x4 LEGO® DUPLO® bricks to help children practice their memory, movement, creativity, problem-solving, language, and more. To learn more about Six Bricks, visit https://www.carefored.co.za.")
+        st.caption("LEGO® and DUPLO® are registered trademarks of the LEGO® Group. © 2024 The LEGO® Group.")
+
+tab1, tab2 = st.tabs(["Six Bricks Activity Library", "Community Submissions"])
+
+
+# DATAFRAME START
+# Define columns to exclude from being filtered on
+excluded_columns = ["Link to activity", "Activity name"]
+
+
+with tab1: 
+     st.write("Use the filters below to find Six Bricks activities that align with the developmental areas or subjects you're interested in. You can also add additional filters to refine your search.")
+    # Function to add a nested filtering UI on top of the dataframe
+
+     def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
+        """
+        Adds a UI on top of a dataframe to let viewers filter columns
+
+        Args:
+            df (pd.DataFrame): Original dataframe
+
+        Returns:
+            pd.DataFrame: Filtered dataframe
+        """
         
+        df = df.copy()
+            
         with st.container():
             to_filter_columns = st.multiselect("Select your filters:", [col for col in df.columns if col not in excluded_columns], default=("Subject areas", "Key skill areas"))
             for column in to_filter_columns:
@@ -69,37 +85,24 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                     )
                     if user_text_input:
                         df = df[df[column].astype(str).str.contains(user_text_input)]
-    return df
-
-# Read and filter activity list
-df = pd.read_csv("activity_table.csv")
-df_filtered = filter_dataframe(df)
-
-# Display dataframe
-st.subheader("Six Bricks Activity Library")
-st.info("Use the panel on the left-hand side to filter this list of Six Bricks activities.",icon="💡")
-st.dataframe(
-    df_filtered,
-    column_config={
-        "Link to activity": st.column_config.LinkColumn("Link to activity",display_text="Click here")
-    },
-    hide_index=True,
-)
-
-# DATAFRAME END
-
-"---"
-
-st.subheader("Submit an activity")
-st.write("If you would like to contribute to the library with an activity you have created, you can submit your Six Bricks activity using the [linked form](https://forms.gle/fqpreubi3ZmnoWw86). We'll then review your submission and add it to the library.")
+        return df
+     # Read and filter activity list
+     df = pd.read_csv("activity_table.csv")
+     df_filtered = filter_dataframe(df)
 
 
-"---"
+     st.dataframe(
+        df_filtered,
+        column_config={
+            "Link to activity": st.column_config.LinkColumn("Link to activity",display_text="Click here")
+        },
+        hide_index=True,
+    )
 
-st.subheader("About Six Bricks")
-st.write("Six Bricks is a play-based learning methodology developed by [Care for Education](https://www.carefored.co.za) and powered by the [LEGO Foundation](https://learningthroughplay.com/). The Six Bricks concept involves implementation of manipulatives (6 colorful LEGO DUPLO bricks) to develop key executive functions and build numerous development areas for children. To learn more about Six Bricks, visit https://www.carefored.co.za.")
-
-"---"
+with tab2: 
+    st.write("Created a Six Bricks Activity that you want to share with the global community? Follow the steps below to get your activity added to this library.")
+    st.write("1. Make a copy of the [linked template](https://www.canva.com/design/DAGGYv8tDXc/e4m3ExfR87otSz9GwN2OcQ/edit?utm_content=DAGGYv8tDXc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton), and fill it in with the details about your activity. ") 
+    st.write("2. Submit your activity for review using the [linked form](https://forms.gle/fqpreubi3ZmnoWw86).")
+    st.write("3. Stay tuned; we'll review your submission and get it added to the library.")
 
 st.caption("This open-source web application has been developed by [Leap Education](mailto:learn.play.leap@gmail.com) & [Six Bricks Australia](https://www.sixbricksaustralia.au/). Check out our Github repository [here](https://github.com/raveenadoshi/streamlit-example/tree/master).")
-st.caption("LEGO® and DUPLO® are registered trademarks of the LEGO® Group. © 2024 The LEGO® Group.")
